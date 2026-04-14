@@ -1,0 +1,24 @@
+[
+    {
+        "firstName": "Stefano",
+        "lastName": "Robespierre",
+        "age": 99,
+        "country": "FR",
+        "canDrive": false,
+        "hobbies": [
+            "Partying",
+            "Sleeping"
+        ]
+    },
+    {
+        "firstName": "Giangiorgio",
+        "lastName": "Bonaparte",
+        "age": 99,
+        "country": "FR",
+        "canDrive": false,
+        "hobbies": [
+            "Conquering",
+            "Slaughtering"
+        ]
+    }
+]
