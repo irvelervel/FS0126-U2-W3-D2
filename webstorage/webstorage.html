@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Motori di STORAGE nei browsers</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main>
+      <section>
+        <h3>LocalStorage</h3>
+        <p>
+          LocalStorage è un motore di memorizzazione dati presente in tutti i
+          browsers moderni che permette di memorizzare un piccolo quantitativo
+          di dati (~5MB) per dominio al fine di salvare in locale delle
+          informazioni per migliorare l'esperienza utente (temi, login,
+          preferenze). Questi dati sono esposti all'utente e possono essere
+          eliminati in qualsiasi momento, quindi è importante non farci
+          affidamento cieco per il funzionamento della webapp. Entrambi i motori
+          di storage memorizzano informazioni a livello di DOMINIO, quindi ogni
+          "sito" può solamente interagire con la tabella di local/session
+          relativa a se stesso.
+        </p>
+      </section>
+      <section>
+        <h3>SessionStorage</h3>
+        <p>
+          SessionStorage è un motore di memorizzazione dati il cui funzionamento
+          è identico a LocalStorage con un'unica fondamentale differenza: i dati
+          vengono automaticamente DISTRUTTI alla chiusura del tab o alla
+          chiusura del browser (ha un meccanismo di auto-distruzione integrato).
+          Utile per avere la certezza che le informazioni salvate durante la
+          sessione corrente vengano automaticamente distrutte all'uscita (logout
+          automatico banca, chiusura sessione SPID etc. etc.).
+        </p>
+      </section>
+      <section>
+        <div>
+          <h4>LOCALSTORAGE</h4>
+          <div>
+            <button class="btn btn-primary" onclick="localStorageSave()">
+              SALVA IN LOCALSTORAGE
+            </button>
+          </div>
+          <div>
+            <button class="btn btn-info" onclick="localStorageRead()">
+              LEGGI LOCALSTORAGE
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./webstorage.js"></script>
+  </body>
+</html>
